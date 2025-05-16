@@ -1,0 +1,197 @@
+// @impor
+
+.modal{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #00000067;
+  z-index: 1000;
+  display: flex;
+  // align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: 1rem;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .modal-dialog{
+    &.modal-lg {
+      width: 800px;
+    }
+    &.modal-full {
+      width: 100%;
+    }
+    border-radius: 8px;
+    width: 650px;
+    // height: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 1.5rem;
+    .modal-content{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      pointer-events: auto;
+      background-color: var(--white);
+      background-clip: padding-box;
+      border: 0 solid rgba(0, 0, 0, 0.2);
+      border-radius: 0.4375rem;
+      box-shadow: 0 15px 35px rgba(50, 50, 93, 0.2), 0 5px 15px rgba(0, 0, 0, 0.17);
+      outline: 0;
+      border-top: 6px solid var(--primary);
+      .modal-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 15px;
+        border-radius: 5px 5px 0 0;
+        .title{
+          font-size: 16px;
+          color: #3B5160;
+          font-weight: 700;
+        }
+        .close-btn{
+          height: 1.5rem;
+          width: 1.5rem;
+          background: var(--black);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 3px;
+          #icon{
+            height: 90%;
+            cursor: pointer;
+            fill: var(--white);
+          }
+        }
+      }
+      .header-bg{
+        // background: var(--card-header-bg);
+        // background: linear-gradient(to right, #7579ff 0%, #b224ef 100%);
+        border-bottom: 1px solid var(--primary);
+        .title{
+          color: var(--primary);
+        }
+        .close-btn{
+          background: var(--primary);
+          #icon{
+            fill: var(--white);
+          }
+        }
+      }
+      .modal-body{
+        padding: 15px 1.5rem;
+        .bal{
+          text-align: center;
+          margin: 1rem 0;
+          font-size: 18px;
+        }
+      }
+      .modal-footer{
+        border-top: 1px solid var(--border-color);
+        padding-top: 1rem;
+        margin-top: 1rem;
+        .btns{
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.big-modal{
+  .modal-dialog{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    .bank-row{
+      position: relative;
+      .delete-icon{
+        cursor: pointer;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        img{
+          height: 1.2rem;
+          width: 1.2rem;
+        }
+      }
+    }
+  }
+}
+.mid-modal{
+  .modal-dialog{
+    width: 1140px;
+    .save-btn{
+      .checks{
+        gap: 1.5rem;
+        .data{
+          .text{
+            font-size: 0.85rem;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .4s linear;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.pop-enter-active,
+.pop-leave-active {
+  transition: transform 0.4s cubic-bezier(0.5, 0, 0.5, 1), opacity 0.4s linear;
+}
+
+.pop-enter,
+.pop-leave-to {
+  opacity: 0;
+  transform: scale(0.3) translateY(-50%);
+}
+
+@media (max-width: 1024px){
+  .modal{
+    // align-items: center;
+    height: 100vh;
+    padding: 0;
+    .modal-dialog{
+      width: 100% !important;
+      align-items: flex-start;
+      // height: calc(100% - 7rem);
+      margin-top: 0;
+      // overflow-y: scroll;
+      padding: 1rem;
+      .modal-content{
+        max-height: unset;
+        min-height: max-content;
+        .modal-body{
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .modal .modal-dialog .modal-content .modal-footer .btns {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}

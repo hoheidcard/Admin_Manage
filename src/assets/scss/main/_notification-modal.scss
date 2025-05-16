@@ -1,0 +1,114 @@
+.notification-modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #00000064;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  .noti-card{
+    // background: var(--white);
+    border: 0 solid rgba(0, 0, 0, 0.2);
+    // border-radius: 0.5;
+    // box-shadow: 0 15px 35px rgba(50, 50, 93, 0.2), 0 5px 15px rgba(0, 0, 0, 0.17);
+    width: 450px;
+    // height: max-content;
+    height: 100%;
+    .card-header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 15px;
+      border-radius: 8px 8px 0 0;
+      background: linear-gradient(to right, #7579ff 0%, #b224ef 100%);
+      height: 2.8rem;
+
+      .title{
+        font-size: 16px;
+        color: var(--white);
+        font-weight: 700;
+      }
+      .close-btn{
+        height: 1.05rem;
+        width: 1.05rem;
+        background: var(--white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        #icon{
+          height: 90%;
+          cursor: pointer;
+          fill: var(--primary);
+        }
+      }
+    }
+    .card-body{
+      // padding: 1rem;
+      max-height: calc(100% - 2.8rem);
+      box-shadow: 0 15px 35px rgba(50, 50, 93, 0.2), 0 5px 15px rgba(0, 0, 0, 0.17);
+      background: var(--white);
+      border-radius: 0 0 0.5rem 0.5rem;
+      overflow-y: scroll;
+      &::-webkit-scrollbar-track{
+        // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        // background: red;
+      }
+      &::-webkit-scrollbar{
+        width: 6px;
+        // height: 5px;
+        // background: red;
+      }
+      &::-webkit-scrollbar-thumb{
+        border-radius: 5px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background: #b224ef;
+      }
+      .noti-list{
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 1rem 1rem;
+        &:hover{
+          // background: #eeeeee97;
+          background: var(--primary-light1);
+        }
+        &:not(:last-child){
+          border-bottom: 1px solid #e8e8e885;
+        }
+        .dot{
+          height: 1rem;
+          width: 1rem;
+          border-radius: 100%;
+          background: lightgray;
+          margin-top: 3px;
+        }
+        .bg-primary{
+          background: var(--primary);
+        }
+        .detail{
+          width: calc(100% - 1.5rem);
+          .title{
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+          }
+          .text{
+            color: var(--grey);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

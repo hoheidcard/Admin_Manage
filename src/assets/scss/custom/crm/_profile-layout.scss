@@ -1,0 +1,209 @@
+.profile-layout {
+  // display: flex;
+  // align-items: flex-start;
+  gap: 1.5rem;
+  .left-card {
+    // width: 400px;
+    // background: var(--yellow-gradient);
+    // background: var(--primary-light1);
+    background: #dbd2eb;
+    color: var(--grey);
+    box-shadow: var(--sub-card-box-shadow);
+    padding: 0;
+    // margin-bottom: 1rem;
+    .top-info {
+      // margin-bottom: 1rem;
+      padding: 1rem;
+      // border-bottom: 1px solid #eeeeee72;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+      .img {
+        border-radius: 5%;
+        border: 3px solid var(--primary);
+        display: flex;
+        height: 4rem;
+        width: 4rem;
+        // margin-bottom: 1rem;
+        img {
+          border-radius: 5%;
+          height: 100%;
+          width: 100%;
+        }
+        img:hover {
+          z-index: 1;
+          transform: scale(4) translate(50%, 0%); /* Adjust the zoom level as needed */
+          transform-origin: center center; /* Center the zoom around the image center */
+          transition: transform 0.3s ease;
+          background-color: #fff;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+            0 6px 6px rgba(0, 0, 0, 0.23);
+        }
+      }
+      .info {
+        .name {
+          color: var(--grey);
+          margin-bottom: 0.5rem;
+          display: flex;
+          align-items: flex-end;
+          gap: 0.5rem;
+          h3 {
+            line-height: 1;
+            font-size: 1.5rem;
+            color: var(--primary);
+          }
+        }
+        .about {
+          font-size: 1rem;
+          .titles {
+            width: 25%;
+            // border: 1px solid red;
+          }
+          .desc {
+            width: 75%;
+          }
+        }
+      }
+    }
+    .bottom-links {
+      display: flex;
+      // flex-direction: column;
+      // background: var(--primary-light2);
+      padding: 0 0.5rem;
+      gap: 1rem;
+      .profile-link {
+        padding: 0.5rem 1rem;
+        border-radius: 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--white);
+        color: var(--primary);
+        font-weight: 700;
+        border-radius: 10px 10px 0 0;
+      }
+      .router-link-active {
+        background: var(--primary);
+
+        color: var(--white);
+        font-weight: 700;
+        .icon {
+          #icon {
+            fill: var(--primary);
+            #icon-inner {
+              fill: var(--primary);
+            }
+          }
+        }
+      }
+    }
+    .bottom-links-mob {
+      display: none;
+    }
+  }
+  .right-card {
+    // width: calc(100% - 400px);
+    .top-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      h3 {
+        font-size: 1.5rem;
+      }
+      .edit-icon {
+        height: 2.2rem;
+        width: 2.2rem;
+        border-radius: 100%;
+        background: var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        #icon {
+          height: 1.5rem;
+          width: 1.5rem;
+          fill: var(--white);
+          #icon-inner {
+            fill: var(--white);
+          }
+        }
+      }
+    }
+  }
+}
+
+//media queries
+@media (max-width: 768px) {
+  .profile-layout {
+    .left-card {
+      padding: 10px;
+
+      br {
+        display: none;
+      }
+
+      img:hover {
+        transform: scale(2) translate(0%) !important;
+      }
+
+      .top-info {
+        flex-direction: column;
+      }
+      .bottom-links {
+        padding: 0;
+        // background: var(--primary-light2);
+
+        .profile-link {
+          border-radius: 5px;
+
+          .title {
+            line-height: 1;
+          }
+        }
+      }
+      .bottom-links-mob {
+        display: flex;
+        flex-direction: column;
+        // background: var(--primary);
+        gap: 0;
+        .profile-link {
+          border-radius: 5px;
+          background: none;
+          border-top: 1px solid #ffffff57;
+          padding: 0.8rem 1rem;
+          // color: var(--white);
+          .icon {
+            #icon {
+              height: 1.2rem;
+              width: 1.2rem;
+              fill: var(--primary);
+              #icon-inner {
+                fill: var(--primary);
+              }
+            }
+          }
+        }
+      }
+      .bottom-links-desk {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+    }
+    .right-card {
+      padding: 10px;
+    }
+
+    .teacher-permission-page .table-body {
+      padding: 0;
+    }
+  }
+  .my-account-page {
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    background: var(--white);
+  }
+}

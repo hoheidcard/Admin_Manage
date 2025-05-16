@@ -1,0 +1,58 @@
+.dashboard-layout-crm {
+  .middle-container {
+    margin-top: 9.6rem;
+    // padding-bottom: 2.5rem;
+    min-height: calc(100vh - 12.2rem);
+  }
+}
+
+.dashboard-layout-user {
+  .middle-container {
+    margin-top: 6.5rem;
+  }
+  .whatsapp-icon {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 4rem;
+    z-index: 850;
+    .icon {
+      height: 4rem;
+      width: 4rem;
+      border-radius: 100%;
+      box-shadow: var(--box-shadow);
+      animation: heartbeat 2s infinite;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      #icon {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+//media queries
+@media (max-width: 1024px) {
+  .dashboard-layout {
+    .middle-container {
+      margin-top: 5.5rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-layout .calender-box {
+    flex-direction: column-reverse;
+  }
+
+  .dashboard-layout .calender-box .right-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .dashboard-layout {
+  }
+}

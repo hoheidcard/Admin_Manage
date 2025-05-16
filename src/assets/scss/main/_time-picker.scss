@@ -1,0 +1,60 @@
+.base-time-picker {
+  position: relative;
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  .select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px solid var(--border-color);
+    padding: 8px 12px 8px 12px;
+    border-radius: 4px;
+    background-color: var(--white);
+    font-size: 14px;
+    height: 2.5rem;
+    cursor: pointer;
+    outline: none;
+    color: var(--grey);
+    &::-ms-expand {
+      display: none;
+    }
+
+    &:focus {
+      border-color: var(--blue);
+    }
+  }
+
+  // Styling for the options within select elements
+  .option {
+    background-color: var(--white);
+    color: #333;
+  }
+}
+
+// Material Design ripple effect for options (requires JavaScript)
+.option {
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: var(--dark-blue);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.4s, transform 0.4s;
+  }
+
+  &:active:after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0s;
+  }
+}

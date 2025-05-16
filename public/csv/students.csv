@@ -1,0 +1,4 @@
+regNo,studentNo,admissionNo,rollNo,rfidNo,name,emailId,cast,religion,nationality,contactNo,address,city,state,pincode,imageNumber,gender,dob,fatherName,fatherContactNo,fatherOccupation,fatherIncome,motherName,motherContactNo,motherOccupation,motherIncome,classListId,classDivId,houseZoneId
+1,Student 1,,,,,,,,,,,,,,,MALE,,,,,,,,,,,,
+2,Student 2,,,,,,,,,,,,,,,FEMALE,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,OTHER,,,,,,,,,,,,

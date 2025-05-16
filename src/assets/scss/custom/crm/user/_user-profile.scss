@@ -1,0 +1,73 @@
+.user-profile {
+  .data-list {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    .data {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      width: 50%;
+      .title {
+        font-weight: 700;
+        width: 8rem;
+      }
+      .val {
+        color: var(--grey);
+      }
+    }
+  }
+}
+
+//media queries
+@media (max-width: 768px) {
+  .user-profile {
+    // box-shadow: var(--box-shadow);
+    padding: 0px;
+    background: var(--white);
+    border-radius: 5px;
+    overflow: scroll;
+    width: 100%;
+  }
+
+  .permission-page {
+    .top-header {
+
+      width: fit-content;
+      .title {
+        width: 140px;
+        text-align: center;
+      }
+    }
+
+    .per-table {
+      width: fit-content;
+
+      .left-title {
+        width: 140px;
+      }
+
+      .right-permissions {
+        width: fit-content;
+        overflow-x: visible;
+
+        .input-row {
+          width: 140px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .user-profile {
+    .data-list {
+      flex-direction: column;
+      gap: 0;
+      .data {
+        width: 100%;
+      }
+    }
+  }
+}

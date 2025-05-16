@@ -1,0 +1,45 @@
+.create-event-modal{
+  .modal-body{
+    .tabs{
+      display: flex;
+      border: 1px solid lightblue;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+      .tab{
+        padding: 0.5rem 0.5rem;
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+      }
+      .active{
+        font-weight: 700;
+        border-bottom: 2px solid var(--primary);
+      }
+    }
+    .tab-content{
+      
+    }
+  }
+}
+
+.event-modal{
+  .modal-body{
+    .event-details{
+      .data{
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        &:not(:last-child){
+          margin-bottom: 1rem;
+        }
+        .title{
+          font-weight: 700;
+          width: 7rem;
+        }
+        .val{
+          width: calc(100% - 7rem);
+        }
+      }
+    }
+  }
+}

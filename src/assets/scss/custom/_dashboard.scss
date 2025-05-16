@@ -1,0 +1,101 @@
+.dashboard-page {
+  .container {
+    padding: 1rem;
+    .dash-cards {
+      // display: flex;
+      // justify-content: space-between;
+      // align-items: center;
+      display: flex;
+      // grid-template-columns: repeat(5, 1fr);
+      // grid-template-rows: repeat(1, 1fr);
+      gap: 1rem;
+      .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        padding: 16px;
+        border: 1px solid #ccc;
+        .img {
+          height: 3.5rem;
+          width: 3.5rem;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            height: 100%;
+            width: 100%;
+          }
+          .dot {
+            position: absolute;
+            z-index: 5;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 1.5rem;
+            width: 1.5rem;
+            background: rgb(43 170 211 / 54%);
+            border-radius: 100%;
+          }
+        }
+        .details {
+          h4 {
+            color: var(--primary);
+          }
+          .title {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
+
+//media queries
+@media (max-width: 1024px) {
+  .dashboard-page {
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-page {
+    .dashboard-header {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      overflow: scroll;
+      padding: 0 0 10px 0;
+      .text {
+        display: none !important;
+        display: flex;
+        align-items: center;
+      }
+
+      .select-dropdown {
+        width: 100% !important;
+      }
+
+      .date-input {
+        width: 100% !important;
+
+        input {
+          width: 100% !important;
+        }
+      }
+    }
+
+    .container {
+      padding: 10px;
+      .dash-cards {
+        .card {
+          justify-content: start;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .dashboard-page {
+  }
+}

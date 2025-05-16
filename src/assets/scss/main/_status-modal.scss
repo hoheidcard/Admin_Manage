@@ -1,0 +1,65 @@
+.status-modal{
+  .modal{
+    align-items: center;
+  }
+  .status-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    .data{
+      width: calc(100% / 3);
+      display: flex;
+      input{
+        display: none;
+      }
+      input:checked ~ .data-inner.approve-card{
+        background: var(--green);
+        #icon{
+          fill: var(--white);
+        }
+        .title{
+          color: var(--white);
+        }
+      }
+      input:checked ~ .data-inner.pending-card{
+        background: var(--yellow);
+        #icon{
+          fill: var(--white);
+        }
+        .title{
+          color: var(--white);
+        }
+      }
+      input:checked ~ .data-inner.block-card{
+        background: var(--red);
+        #icon{
+          fill: var(--white);
+        }
+        .title{
+          color: var(--white);
+        }
+      }
+      .data-inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 100%;
+        #icon{
+          height: 1.5rem;
+          width: 1.5rem;
+          margin-bottom: 6px;
+          fill: var(--grey);
+        }
+        .title{
+          color: var(--grey);
+        }
+      }
+    }
+  }
+}

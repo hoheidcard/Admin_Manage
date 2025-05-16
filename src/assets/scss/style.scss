@@ -1,0 +1,357 @@
+@import "./wass.scss";
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Regular.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f4f6f9;
+  font-family: "Roboto", sans-serif;
+  // font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  scroll-behavior: smooth;
+  transition: all ease 0.6s;
+  letter-spacing: 0.8px;
+}
+
+.zoom-image {
+  img {
+    height: 30px;
+    width: 30px;
+    border-radius: 5%;
+  }
+  img:hover {
+    z-index: 100000;
+    transform: scale(8) translate(40%, 0%); /* Adjust the zoom level as needed */
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+}
+
+//project css
+.carousel__prev,
+.carousel__next {
+  background: var(--blue) !important;
+  margin: 0 !important;
+  border-radius: 100% !important;
+
+  svg {
+    fill: var(--white);
+  }
+}
+
+//media queries
+@media (min-width: 1024px) and (max-width: 1500px) {
+}
+
+@media (max-width: 768px) {
+  .ag-courses_box {
+    gap: 10px !important;
+  }
+}
+
+@media (max-width: 560px) {
+}
+
+.option-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  a,
+  div,
+  .btn {
+    cursor: pointer;
+    // min-height: 2rem;
+    min-width: 2rem;
+    // max-height: 2rem;
+    // max-width: 2rem;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    border-radius: 10px;
+
+    #icon {
+      height: 1.2rem;
+      width: 1.2rem;
+      fill: var(--white);
+
+      #icon-inner {
+        fill: var(--white);
+      }
+    }
+  }
+}
+
+.top-btn-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
+.no-data-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem 0;
+
+  .img {
+    margin-bottom: 1rem;
+
+    img {
+      height: 15rem;
+      width: 15rem;
+    }
+  }
+
+  .text {
+    color: var(--grey);
+    font-size: 0.95rem;
+  }
+}
+
+.setting-header {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border-bottom: 1px solid lightblue;
+  height: 4.5rem;
+
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .icon {
+      min-height: 2rem;
+      max-height: 2rem;
+      min-width: 2rem;
+      max-width: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--primary);
+      border-radius: 100%;
+
+      #icon {
+        height: 70%;
+        width: 70%;
+        fill: var(--white);
+
+        #icon-inner {
+          fill: var(--white);
+        }
+      }
+    }
+
+    .heading {
+      .text {
+        margin-bottom: 3px;
+        font-size: 11px;
+      }
+
+      h5 {
+        font-weight: 700;
+        font-size: 0.85rem;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    gap: 8px;
+
+    .selects {
+      width: 6rem;
+
+      .single-select {
+        height: 2.2rem;
+      }
+    }
+
+    .searchbar {
+      position: relative;
+      display: flex;
+
+      input {
+        width: 6rem;
+        height: 2.2rem;
+        border-radius: 5px 0 0 5px;
+      }
+
+      .icon {
+        height: 2.2rem;
+        width: 2.2rem;
+
+        #icon {
+          height: 1rem;
+          width: 1rem;
+        }
+      }
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .icon {
+        height: 2.2rem;
+        width: 2.2rem;
+        border-radius: 5px;
+        background: var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        #icon {
+          height: 1rem;
+          width: 1rem;
+          fill: var(--white);
+
+          #icon-inner {
+            fill: var(--white);
+          }
+        }
+      }
+    }
+
+    .select-dropdown {
+      // width: 5rem;
+      height: 2.2rem;
+
+      .select {
+      }
+    }
+  }
+}
+
+.card-pagination {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  margin-top: 1.5rem;
+
+  .divs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .page-item {
+      border: 2px solid var(--primary);
+      border-radius: 10px;
+      padding: 0.8rem;
+      // display: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 2.5rem;
+      width: 3rem;
+      background: var(--white);
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+
+      #icon {
+        height: 1.9rem;
+        width: 1.9rem;
+        fill: var(--primary);
+
+        #icon-inner {
+          fill: var(--primary);
+        }
+      }
+    }
+
+    .active {
+      background: var(--primary);
+      color: var(--white);
+    }
+  }
+}
+
+.dragTableHead {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+
+  .title {
+    width: calc(90% / 3);
+    background-color: #f5f8ff;
+    padding: 1rem;
+  }
+
+  .sl {
+    width: 10%;
+    background-color: #f5f8ff;
+    padding: 1rem;
+  }
+
+  .actn {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.dragAreaList {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .bg-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+    color: black;
+    cursor: move;
+    border-color: #eee #eee #eee #eee;
+    border-style: solid solid solid solid;
+    border-width: 0px 0px 1px 0px;
+  }
+
+  .list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    // border: 1px solid #eee;
+    cursor: move;
+
+    border-color: #eee #eee #eee #eee;
+    border-style: solid solid solid solid;
+    border-width: 0px 0px 1px 0px;
+  }
+
+  .area {
+    width: calc(90% / 3);
+    padding: 1rem;
+  }
+
+  .sl {
+    width: 10%;
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,416 @@
+.user-settings-layout{
+  .container{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    height: calc(100vh - 12.3rem);
+    // background: red;
+    .setting-list-card{
+      width: calc(100% / 3);
+      height: 100%;
+      padding: 0;
+      .setting-list-body{
+        max-height: calc(100% - 4.5rem);
+        overflow-y: scroll;
+        &::-webkit-scrollbar-track{
+          border-radius: 10px;
+          background: #fff;
+        }
+        &::-webkit-scrollbar{
+          width: 4px;
+          background: #fff;
+        }
+        &::-webkit-scrollbar-thumb{
+          border-radius: 10px;
+          background-color: #00A4F7;
+        }
+        .list-item{
+          .title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.7rem 1rem;
+            cursor: pointer;
+            &:hover{
+              transition: all ease 0.4s;
+              background: var(--primary-light1);
+            }
+            .left{
+              display: flex;
+              align-items: flex-start;
+              gap: 8px;
+              #icon{
+                margin-top: 2px;
+                fill: var(--primary);
+                height: 1.2rem;
+                width: 1.2rem;
+                #icon-inner{
+                  fill: var(--primary);
+                }
+              }
+              .text{
+                font-weight: 700;
+              }
+            }
+            .arrow-icon{
+              display: flex;
+              #icon{
+                height: 1.5rem;
+                width: 1.5rem;
+                fill: var(--primary);
+              }
+            }
+          }
+          .sub-list{
+            .sub-list-item{
+              padding: 0.7rem 1rem;
+              padding-left: 2.5rem;
+              display: flex;
+              font-size: 0.8rem;
+              &:hover{
+                transition: all ease 0.4s;
+                background: var(--primary-light1);
+              }
+            }
+          }
+        }
+        .router-link-active{
+          background: var(--primary-light1);
+        }
+      }
+    }
+    .setting-list-data{
+      width: 66.6666%;
+      height: 100%;
+      display: flex;
+      // align-items: flex-start;
+      // gap: 1rem;
+      .cards{
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 100%;
+        height: 100%;
+        .card{
+          width: 100%;
+          height: 100%;
+          .card-body{
+            max-height: calc(100% - 4.5rem);
+            overflow-y: scroll;
+            // background: yellow;
+            &::-webkit-scrollbar-track{
+              // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+              border-radius: 10px;
+              background: #fff;
+            }
+            &::-webkit-scrollbar{
+              width: 4px;
+              background: #fff;
+            }
+            &::-webkit-scrollbar-thumb{
+              border-radius: 10px;
+              // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+              background-color: #00A4F7;
+            }
+          }
+          .school-list{
+            .list-item{
+              border: 1px solid var(--primary-light1);
+              border-radius: 5px;
+              box-shadow: var(--sub-card-box-shadow);
+              padding: 1rem;
+              position: relative;
+              background: rgba(230, 239, 255, 0.18);
+              display: flex;
+              flex-direction: column;
+              cursor: pointer;
+              &:not(:last-child){
+                margin-bottom: 1rem;
+              }
+              .radio-input{
+                position: absolute;
+                width: max-content;
+                right: 0.5rem;
+                top: 0.5rem;
+                z-index: 5;
+              }
+              .logo{
+                display: flex;
+                justify-content: center;
+                margin-bottom: 1rem;
+                img{
+                  width: 8rem;
+                }
+              }
+              .school-details{
+                .name{
+                  color: var(--primary);
+                  font-size: 0.9rem;
+                  margin-bottom: 1rem;
+                }
+                .data{
+                  display: flex;
+                  align-items: flex-start;
+                  gap: 1rem;
+                  &:not(:last-child){
+                    margin-bottom: 0.7rem;
+                  }
+                  .title{
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    width: 8rem;
+                    font-weight: 700;
+                    #icon{
+                      height: 1.2rem;
+                      width: 1.2rem;
+                      fill: var(--primary);
+                      #icon-inner{
+                        fill: var(--primary);
+                      }
+                    }
+
+                  }
+                  .val{
+                    width: calc(100% - 8rem);
+                    word-break: break-word;
+                    font-size: 0.8rem;
+                  }
+                }
+              }
+            }
+          }
+          .teacher-list{
+            .list-item{
+              border: 1px solid var(--primary-light1);
+              border-radius: 5px;
+              box-shadow: var(--sub-card-box-shadow);
+              padding: 0.6rem;
+              padding-top: 1.5rem;
+              position: relative;
+              background: rgba(230, 239, 255, 0.18);
+              display: flex;
+              // flex-direction: column;
+              gap: 8px;
+              cursor: pointer;
+              &:not(:last-child){
+                margin-bottom: 1rem;
+              }
+              .radio-input{
+                position: absolute;
+                width: max-content;
+                right: 0.3rem;
+                top: 0.3rem;
+                z-index: 5;
+              }
+              .logo{
+                // display: flex;
+                // justify-content: center;
+                // margin-bottom: 1rem;
+                img{
+                  width: 2.5rem;
+                }
+              }
+              .teacher-details{
+                width: calc(100% - 2.5rem);
+                .top, .bottom{
+                  display: flex;
+                  align-items: flex-start;
+                  justify-content: space-between;
+                  gap: 0.5rem;
+                }
+                .data{
+                  display: flex;
+                  align-items: flex-start;
+                  gap: 0.3rem;
+                  font-size: 0.75rem;
+                  &:not(:last-child){
+                    margin-bottom: 0.7rem;
+                  }
+                  .title{
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    // width: 8rem;
+                    font-weight: 700;
+                    white-space: nowrap;
+                  }
+                  .val{
+                    // width: calc(100% - 8rem);
+                    word-break: break-word;
+                    font-size: 0.7rem;
+                    color: var(--grey);
+                  }
+                }
+              }
+            }
+          }
+          .form{
+            .img-upload{
+              width: 100%;
+              .img-upload-wrapper{
+                width: 100%;
+                height: auto;
+              }
+            }
+          }
+          .toggle-list{
+            .list-item{
+              border: 1px solid var(--primary-light1);
+              box-shadow: var(--sub-card-box-shadow);
+              background: rgba(230, 239, 255, 0.18);
+              padding: 0.5rem 1rem;
+              &:not(:last-child){
+                margin-bottom: 0.8rem;
+              }
+              .title{
+                width: calc(100% - 3rem);
+              }
+            }
+          }
+          .add-class-card{
+            .tabs{
+              display: flex;
+              border: 1px solid lightblue;
+              border-top: 0;
+
+              .tab{
+                padding: 0.5rem 0.5rem;
+                width: calc(100% / 3);
+                text-align: center;
+                cursor: pointer;
+                &:not(:last-child){
+                  border-right: 1px solid lightblue;
+                }
+              }
+              .active{
+                background: var(--primary);
+                color: var(--white);
+                font-weight: 700;
+              }
+            }
+            .tab-content{
+              padding: 10px;
+              .class-list{
+                .list-item{
+                  border: 1px solid var(--primary-light1);
+                  box-shadow: var(--sub-card-box-shadow);
+                  background: rgba(230, 239, 255, 0.18);
+                  padding: 0.5rem 1rem;
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  gap: 1rem;
+                  &:not(:last-child){
+                    margin-bottom: 0.8rem;
+                  }
+                  .name{
+                    font-weight: 700;
+                    color: var(--grey);
+                  }
+                  .icons{
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                    .icon{
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      height: 1.8rem;
+                      width: 1.8rem;
+                      border-radius: 100%;
+                      background: var(--primary);
+                      cursor: pointer;
+                      #icon{
+                        height: 60%;
+                        width: 60%;
+                        fill: var(--white);
+                        #icon-inner{
+                          fill: var(--white);
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .notice-list{
+            .list-item{
+              border: 1px solid var(--primary-light1);
+              border-radius: 5px;
+              box-shadow: var(--sub-card-box-shadow);
+              padding: 1rem;
+              position: relative;
+              background: rgba(230, 239, 255, 0.18);
+              display: flex;
+              // flex-direction: column;
+              cursor: pointer;
+              &:not(:last-child){
+                margin-bottom: 1rem;
+              }
+              .radio-input{
+                position: absolute;
+                width: max-content;
+                right: 0.4rem;
+                top: 0.4rem;
+                z-index: 5;
+              }
+              .notice-details{
+                display: flex;
+                align-items: flex-start;
+                gap: 1rem;
+                width: 100%;
+                .img{
+                  width: 2.5rem;
+                  width: 2.5rem;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  img{
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 100%;
+                  }
+                }
+                .details{
+                  width: calc(100% - 2.5rem);
+                  .title{
+                    font-weight: 700;
+                    color: var(--grey);
+                    margin-bottom: 6px;
+                  }
+                  .bottom{
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 0.7rem;
+                    gap: 0.5rem;
+                    color: var(--grey);
+                    .status{
+                      display: flex;
+                      gap: 8px;
+                      .text{
+
+                      }
+                      .status-list{
+                        display: flex;
+                        span{
+
+                        }
+                        .s-active{
+                          font-weight: 700;
+                          color: var(--primary);
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.not-found-page{
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // gap: 2rem;
+  .img{
+    width: 50%;
+    // height: 80%;
+    img{
+      width: 100%;
+    }
+  }
+  h4{
+
+  }
+}
+
+
+
+//media queries
+@media (max-width: 768px){
+.not-found-page{
+  padding: 1rem;
+  .img{
+    width: 90%;
+  }
+}
+}

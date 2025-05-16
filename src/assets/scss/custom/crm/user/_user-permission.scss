@@ -1,0 +1,137 @@
+.permission-page {
+  border: 1px solid gray;
+  border-bottom: 0;
+  .top-header {
+    font-weight: bold;
+    background: rgba(128, 128, 128, 0.247);
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+
+    .title {
+      padding: 1rem;
+      width: calc(100% / 5);
+      &:not(:first-child){
+        border-left: 1px solid gray;
+      }
+    }
+
+  }
+
+  .per-table {
+    display: flex;
+    border-bottom: 1px solid gray;
+
+    .left-title {
+      width: calc(100% / 5);
+
+      .title {
+        width: 100%;
+        white-space: nowrap;
+        padding: 1rem;
+        font-weight: 700;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:not(:last-child) {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+
+    .right-permissions {
+      display: flex;
+      width: 100%;
+
+      .input-row {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        border-left: 1px solid gray;
+
+        .row-title,
+        .toggle-input {
+          // width: calc(100% / 5);
+          text-align: center;
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+          color: var(--primary);
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .per-row {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    gap: 1rem;
+
+    .title {
+      width: 8rem;
+    }
+
+    .input-row {
+      width: calc(100% - 9rem);
+      display: flex;
+      align-items: center;
+
+      .row-title,
+      .toggle-input {
+        width: calc(100% / 5);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+
+
+//media queries
+@media (max-width: 560px) {
+  .permission-page {
+    .per-table {
+      .right-permissions {
+        max-width: 100%;
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar-track {
+          // -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+          border-radius: 10px;
+          background: #fff;
+          // margin-top: 1rem;
+          // padding: 1rem 0;
+        }
+
+        &::-webkit-scrollbar {
+          // width: 2px;
+          height: 5px;
+          // padding: 1rem 0;
+          background: #fff;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          border-radius: 5px;
+          -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+          background-color: var(--primary-light2);
+        }
+
+        .input-row {
+
+          .row-title,
+          .toggle-input {
+            // min-width: 5rem;
+            // max-width: 5rem;
+          }
+        }
+      }
+    }
+  }
+}

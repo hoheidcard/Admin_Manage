@@ -1,0 +1,182 @@
+.contact-page{
+  .contact-content{
+    margin: 0.5rem 0;
+    .contact-card{
+      display: flex;
+      align-items: center;
+      padding: 0;
+      // background: var(--primary-gradient);
+      background-color: var(--primary);
+      margin-bottom: 1rem;
+      .form{
+        width: 60%;
+        padding: 2rem;
+        background: var(--white);
+        h4{
+          margin-bottom: 8px;
+        }
+        .sub-text{
+          margin-bottom: 1rem;
+        }
+        .form-item{
+          .animate-label{
+            position: relative;
+            margin-top: 20px;
+            input{
+              width: 100%;
+              border: none;
+              border-bottom: 1px solid #eee;
+              padding-bottom: 6px;
+              &:focus{
+                outline: none;
+                box-shadow: none;
+              }
+              &:valid + label, &:focus + label{
+                bottom: 35px;
+                // font-size: 10px;
+              }
+              &:focus + label{
+                color: var(--primary);
+              }
+              &:focus ~ line::before{
+                width: 100%;
+                right: 0;
+                transition: all .3s ease;
+              }
+            }
+            label{
+              position: absolute;
+              bottom: 6px;
+              left: 0;
+              transition: .3s all ease;
+              font-size: 14px;
+              width: 100%;
+              color: #888888;
+            }
+            line{
+              &::before{
+                content: '';
+                position: absolute;
+                background: var(--primary);
+                width: 0px;
+                height: 2px;
+                right: 50%;
+                bottom: 0;
+              }
+            }
+          }
+        }
+        .save-btn{
+          .btn{
+            gap: 8px;
+            #icon{
+              height: 1.2rem;
+              width: 1.2rem;
+              fill: var(--white);
+              #icon-inner{
+                fill: var(--white);
+              }
+            }
+          }
+        }
+      }
+      .contact-info{
+        color: var(--white);
+        padding: 2rem;
+        width: 40%;
+        h5{
+          color: var(--white);
+          font-size: 1.3rem;
+          margin-bottom: 2rem;
+        }
+        .data-content{
+          margin-bottom: 2rem;
+          .data{
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            &:not(:last-child){
+              margin-bottom: 1.5rem;
+            }
+            .icon{
+              display: flex;
+              align-items: center;
+              width: 1.5rem;
+              #icon{
+                height: 1.2rem;
+                width: 1.2rem;
+                fill: var(--white);
+                #icon-inner{
+                  fill: var(--white);
+                }
+              }
+            }
+          }
+        }
+        .social-links{
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          .icon{
+            height: 2rem;
+            width: 2rem;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover{
+              transition: all ease 0.6s;
+              background: var(--white);
+              #icon{
+                fill: var(--primary);
+                #icon-inner{
+                  fill: var(--primary);
+                }
+              }
+            }
+            #icon{
+              fill: var(--white);
+              height: 1.5rem;
+              width: 1.5rem;
+              #icon-inner{
+                fill: var(--white);
+              }
+            }
+          }
+        }
+      }
+    }
+    .map{
+      box-shadow: var(--box-shadow);
+      display: flex;
+      iframe{
+        width: 100%;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+
+
+//media queries
+@media (max-width: 560px){
+  .contact-page{
+    .contact-content{
+      .contact-card{
+        flex-direction: column;
+        .form{
+          width: 100%;
+          padding: 1rem;
+          h4{
+            font-size: 1.5rem;
+          }
+        }
+        .contact-info{
+          width: 100%;
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}

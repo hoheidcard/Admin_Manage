@@ -1,0 +1,26 @@
+.badge{
+  padding: 3px 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.4;
+  height: max-content;
+  display: flex;
+  border-radius: 3px;
+  width: max-content;
+}
+.primary-badge{
+  background: var(--primary);
+}
+.info-badge{
+  background: #2196f3;
+}
+.success-badge{
+  background: var(--green);
+}
+.warning-badge{
+  background: #e2a03f;
+}
+.danger-badge{
+  background: #e7515a;
+}

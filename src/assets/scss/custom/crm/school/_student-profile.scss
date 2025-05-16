@@ -1,0 +1,263 @@
+.student-profile-page {
+  .container {
+    .left-card {
+      width: calc(100% / 3);
+      .student-card {
+        position: relative;
+        .top-icons {
+          position: absolute;
+          top: 0.5rem;
+          right: 0.5rem;
+          .icon {
+            height: 2rem;
+            width: 2rem;
+            border-radius: 100%;
+            background: var(--primary);
+            cursor: pointer;
+            #icon {
+              height: 60%;
+              width: 60%;
+              fill: var(--white);
+              #icon-inner {
+                fill: var(--white);
+              }
+            }
+          }
+        }
+        .profile-img {
+          .img {
+            border: 5px solid var(--primary);
+            border-radius: 100%;
+            img {
+              height: 7rem;
+              width: 7rem;
+              border-radius: inherit;
+            }
+          }
+        }
+        .name {
+          color: var(--primary);
+          font-size: 1.1rem;
+          text-align: center;
+        }
+        .other-details {
+          .data {
+            &:not(:last-child) {
+              margin-bottom: 10px;
+            }
+            .title {
+              font-weight: 700;
+              color: var(--grey);
+              font-size: 0.85rem;
+              width: 7rem;
+            }
+            .val {
+              width: calc(100% - 7rem);
+            }
+          }
+        }
+      }
+      .login-card {
+        .title {
+          font-weight: 700;
+          color: var(--grey);
+          white-space: nowrap;
+        }
+        .input {
+          background: var(--primary-light1);
+          padding: 2px 5px;
+          border-radius: 5px;
+          .text {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--primary);
+          }
+        }
+      }
+    }
+    .middle-card {
+      width: calc(100% / 3);
+
+      .student-details-card {
+        .img {
+          border-radius: 100%;
+          box-shadow: var(--sub-card-box-shadow);
+          img {
+            height: 3.5rem;
+            width: 3.5rem;
+            border-radius: 100%;
+          }
+        }
+        .info {
+          .name {
+            font-size: 1rem;
+          }
+          .detail-row {
+            flex-wrap: wrap;
+            row-gap: 6px;
+            .data {
+              .title {
+                font-weight: 700;
+                color: var(--grey);
+              }
+            }
+          }
+        }
+      }
+    }
+    .right-card {
+      width: calc(100% / 3);
+      .card {
+        .img {
+          width: 100%;
+          &:not(:last-child) {
+            margin-bottom: 1rem;
+          }
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.tree,
+.tree ul,
+.tree li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.tree {
+  // margin: 0 0 1em;
+  text-align: center;
+  padding: 1rem 0;
+  .span {
+    // display: none;
+    // display: flex;
+    // display: block;
+    // width: max-content;
+    // max-width: 10rem;
+    .name {
+      // position: absolute;
+      // top: 2rem;
+      // left: 50%;
+      // transform: translateX(-50%);
+      // padding: 0.5rem 1rem;
+      // border: 1px solid var(--blue);
+      // display: none;
+    }
+  }
+}
+.tree,
+.tree ul {
+  display: table;
+}
+.tree ul {
+  width: 100%;
+}
+.tree li {
+  display: table-cell;
+  // padding: .5em 0;
+  vertical-align: top;
+}
+/* _________ */
+.tree li:before {
+  outline: solid 1px #1368fbbd;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0px;
+}
+.tree li:first-child:before {
+  left: 50%;
+}
+.tree li:last-child:before {
+  right: 50%;
+}
+
+.tree code,
+.tree .span {
+  border: solid 0.1em var(--blue);
+  border-radius: 0.2em;
+  border-radius: 8px;
+  display: inline-block;
+  margin: 0 0.2em 2rem;
+  padding: 0.5rem 1rem;
+  position: relative;
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--blue);
+  &:hover {
+    transition: all ease 0.4s;
+    background: var(--blue);
+    color: var(--white);
+  }
+  .name {
+    // display: none;
+  }
+}
+
+.tree ul {
+  // padding: 2rem 0;
+  // position: relative;
+  &:before {
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    height: 2rem;
+    width: 1px;
+    background: #09347d;
+    // background: var(--primary);
+    // background: red;
+    // z-index: 5;
+  }
+  .child-list {
+    // display: none;
+    // &::before{
+    //   outline: solid 1px #1368fbbd;
+    //   content: "";
+    //   left: 0;
+    //   position: absolute;
+    //   right: 0;
+    //   top: 5px;
+    // }
+  }
+}
+.tree ul li .end-child {
+  // display: none;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  &::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: -2rem;
+    height: 2rem;
+    // background: red;
+    outline: solid 1px #1368fbbd;
+  }
+}
+
+// MEDIA QUERRY
+
+@media (max-width: 768px) {
+
+  .student-details-page .row{
+    padding-bottom: 10px;
+    display: -webkit-box;
+    overflow: scroll;
+    gap: 20px;
+  }
+
+  .img-upload .img-upload-wrapper {
+    height: 100px;
+    width: 100px;
+  }
+}

@@ -1,0 +1,21 @@
+.policy-page{
+  .main-card{
+    .card-body{
+      h5{
+        font-size: 0.95rem;
+        margin-bottom: 5px;
+      }
+      p{
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px ) { 
+  .policy-page .main-card {
+    padding: 0;
+  }
+}
+
+

@@ -1,0 +1,90 @@
+.login-inner-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .logo{
+    margin-bottom: 1rem;
+    img{
+      width: 8rem;
+    }
+  }
+  .card{
+    width: 390px;
+    padding: 1.5rem;
+    box-shadow: var(--card-box-shadow);
+    border-radius: 10px;
+    .form{
+      .login-heading{
+        margin-bottom: 0.8rem;
+      }
+      ul{
+        margin-bottom: 0.5rem;
+        .data-text{
+          display: flex;
+          align-items: flex-start;
+          flex-wrap: wrap;
+          color: var(--grey);
+          font-size: 0.75rem;
+          position: relative;
+          padding-left: 1rem;
+          &:not(:last-child){
+            margin-bottom: 0.2rem;
+          }
+          &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 5px;
+            height: 6px;
+            width: 6px;
+            border-radius: 100%;
+            background: var(--primary);
+          }
+          span{
+            color: var(--primary);
+            margin-left: 7px;
+            font-size: 0.75rem;
+          }
+        }
+      }
+      .select-list{
+        .list{
+          display: flex;
+          margin-bottom: 1rem;
+          input{
+            display: none;
+            
+          }
+          input:checked ~ .text{
+            background: var(--primary-light1);
+            border-color: var(--primary);
+            img{
+              display: block;
+            }
+          }
+          .text{
+            border: 1px solid var(--border-color);
+            width: 100%;
+            padding: 0.7rem 0.5rem;
+            border-radius: 4px;
+            position: relative;
+            padding-right: 1.5rem;
+            img{
+              display: none;
+              position: absolute;
+              right: 6px;
+              top: 50%;
+              transform: translateY(-50%);
+              height: 14px;
+              width: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .reg-row{
+    margin-top: 1.2rem;
+
+  }
+}

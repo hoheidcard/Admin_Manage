@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Roboto-Regular.ttf');
+}
+
+
+//custom
+@import "custom/navbar";
+@import "custom/dashboard";
+@import "custom/dashboard-layout";
+@import "custom/not-found";
+@import "custom/footer";
+@import "custom/footer2";
+@import "custom/menu-wrapper";
+@import "custom/filter";
+@import "custom/timetable";
+@import "custom/progress-bar";
+@import "custom/select-card";
+@import "custom/product-detail";
+@import "custom/cart-detail";
+
+// @import "custom/";
+
+
+// Other
+@import "custom/other-pages/faq";
+@import "custom/other-pages/about";
+@import "custom/other-pages/policy";
+@import "custom/other-pages/contact";
+
+
+//auth
+@import "custom/auth/login-layout";
+@import "custom/auth/login-type";
+@import "custom/auth/login";
+
+// User
+@import "custom/user/homepage";
+@import "custom/user/cards-list";
+
+// crm
+@import "custom/crm/settings-layout";
+@import "custom/crm/profile-layout";
+@import "custom/crm/user/user-permission";
+@import "custom/crm/user/user-profile";
+
+//design
+@import "custom/crm/design/card-design";
+
+//crm school
+@import "custom/crm/school/add-student";
+@import "custom/crm/school/student-profile";
+
+//core
+@import "core/btn";
+@import "core/variables";
+@import "core/common";
+@import "core/modal";
+@import "core/multi-select";
+@import "core/single-select";
+@import "core/img-upload";
+@import "core/table";
+@import "core/alert";
+@import "core/badge";
+@import "core/ribbon";
+@import "core/tooltip";
+@import "core/loader";
+@import "core/card";
+
+
+//main
+@import "main/confirm-modal";
+@import "main/img-upload";
+@import "main/status-modal";
+@import "main/event-calender";
+@import "main/create-event-modal";
+@import "main/time-picker";
