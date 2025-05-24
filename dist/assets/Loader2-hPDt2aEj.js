@@ -1,0 +1,1 @@
+import{_ as o}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{o as s,c as t,a as e,i as a}from"./index-DwPljJjs.js";const c={},n={class:"load"},r=e("div",{class:"ring"},[a("Loading "),e("span")],-1),_=[r];function d(i,p,f,l,m,h){return s(),t("section",n,_)}const $=o(c,[["render",d]]);export{$ as default};

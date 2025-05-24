@@ -1,0 +1,2 @@
+import{_ as e}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{o,c,a as t}from"./index-DwPljJjs.js";const n={},s={xmlns:"http://www.w3.org/2000/svg","enable-background":"new 0 0 24 24",viewBox:"0 0 24 24",id:"icon"},r=t("path",{d:`M16.9,9.2c-0.4-0.4-1-0.4-1.4,0L12,12.7L8.5,9.2c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l4.2,4.2c0.2,0.2,0.4,0.3,0.7,0.3\r
+	c0.3,0,0.5-0.1,0.7-0.3l4.2-4.2C17.3,10.2,17.3,9.6,16.9,9.2z`},null,-1),a=[r];function _(d,i){return o(),c("svg",s,a)}const f=e(n,[["render",_]]);export{f as default};
