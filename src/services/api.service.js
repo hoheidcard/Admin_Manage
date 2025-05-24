@@ -1,10 +1,14 @@
 import axios from "axios";
 
 import { authHeader } from "./_helper";
+const rootURL = process.env.VUE_APP_API_URL;
+
 
 // const rootURL = "http://localhost:3111/api/v1/";
-const rootURL = "https://admin.abhitprints.in/api/v1/";
+// const rootURL = "https://admin.abhitprints.in/api/v1/";
 // const rootURL = "http://192.168.1.16:3111/api/v1/";
+
+console.log("API URL: ", rootURL);
 
 const authURL = rootURL + "auth";
 const accountURL = rootURL + "account";

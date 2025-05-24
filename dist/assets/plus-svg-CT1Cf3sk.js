@@ -1,3 +1,0 @@
-import{_ as c}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{o as e,c as o,a as n}from"./index-DwPljJjs.js";const t={},s={xmlns:"http://www.w3.org/2000/svg","enable-background":"new 0 0 512 512",viewBox:"0 0 512 512",id:"icon"},r=n("path",{id:"icon-inner",fill:"#231f20",d:`M468.3,212.7H305.2v-169c0-24.2-19.6-43.8-43.8-43.8c-24.2,0-43.8,19.6-43.8,43.8v169h-174
-	C19.6,212.7,0,232.3,0,256.5c0,24.2,19.6,43.8,43.8,43.8h174v168c0,24.2,19.6,43.8,43.8,43.8c24.2,0,43.8-19.6,43.8-43.8v-168h163.1
-	c24.2,0,43.8-19.6,43.8-43.8C512,232.3,492.5,212.7,468.3,212.7z`},null,-1),a=[r];function _(i,d){return e(),o("svg",s,a)}const h=c(t,[["render",_]]);export{h as default};

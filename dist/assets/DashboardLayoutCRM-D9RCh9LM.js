@@ -1,1 +1,0 @@
-import{r as o,o as r,c,b as e,a as n}from"./index-DwPljJjs.js";const _={class:"dashboard-layout dashboard-layout-crm"},d={class:"middle-container"},u={__name:"DashboardLayoutCRM",setup(m){return(i,l)=>{const t=o("NavbarCRM"),a=o("router-view"),s=o("Footer1");return r(),c("section",_,[e(t),n("div",d,[e(a)]),e(s)])}}};export{u as default};
