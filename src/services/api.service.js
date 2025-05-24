@@ -2,8 +2,8 @@ import axios from "axios";
 
 import { authHeader } from "./_helper";
 
-const rootURL = "http://localhost:3111/api/v1/";
-// const rootURL = "https://service.abhitprints.in:3111/api/v1/";
+// const rootURL = "http://localhost:3111/api/v1/";
+const rootURL = "https://admin.abhitprints.in/api/v1";
 // const rootURL = "http://192.168.1.16:3111/api/v1/";
 
 const authURL = rootURL + "auth";
